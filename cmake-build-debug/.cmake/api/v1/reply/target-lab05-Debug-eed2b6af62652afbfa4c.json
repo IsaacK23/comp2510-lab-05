@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lab05.exe"
-		},
-		{
-			"path" : "lab05.pdb"
+			"path" : "lab05"
 		}
 	],
 	"backtrace" : 1,
@@ -38,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu2x -fdiagnostics-color=always"
+					"fragment" : "-g -std=gnu2x -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1 -fcolor-diagnostics"
 				}
 			],
 			"language" : "C",
@@ -68,16 +65,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
 	"name" : "lab05",
-	"nameOnDisk" : "lab05.exe",
+	"nameOnDisk" : "lab05",
 	"paths" : 
 	{
 		"build" : ".",

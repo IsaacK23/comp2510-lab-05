@@ -15,6 +15,18 @@ int memberIDs[MAX_MEMBERS] = {0};
 char memberNames[MAX_MEMBERS][50];
 int totalMembers = 0;
 
+// Prototype functions
+void addBook();
+void viewBooks();
+void searchBook();
+void borrowBook();
+void returnBook();
+void registerMember();
+void viewMembers();
+
+int idExists();
+
+
 void menu()
 {
     int choice;
@@ -59,13 +71,13 @@ void addBook()
     }
 
     int id;
-    chaar title[50];
+    char title[50];
 
     printf("Enter book ID (positive number): ");
     scanf("%d", &id);
     getchar(); // Consume newline
 
-    if(id <= 0 || idExistss(bookIDs, totalBooks, id) != -1)
+    if(id <= 0 || idExists(bookIDs, totalBooks, id) != -1)
     {
         printf("Invalid or duplicate Book ID!\n");
         return;
@@ -137,7 +149,7 @@ void searchBook()
             if(strcmp(bookTitles[i], title) == 0)
             {
                 index = i;
-                break
+                break;
             }
         }
     }
